@@ -12,8 +12,8 @@ html {
 }
 
 body {
-    /* SONY CAMERA BACKGROUND IMAGE SETUP */
-    background: linear-gradient(rgba(11, 11, 13, 0.88), rgba(11, 11, 13, 0.92)), url('camera.jpg') no-repeat center center fixed;
+    /* BACKGROUND IMAGE FIX */
+    background: linear-gradient(rgba(11, 11, 13, 0.85), rgba(11, 11, 13, 0.92)), url('bg.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     min-height: 100vh;
@@ -182,7 +182,7 @@ nav .login-btn:hover {
     color: #a0a0a0;
 }
 
-/* Section Common Styles */
+/* Sections Common Styles */
 .about-section, .skills-section, .contact-section {
     position: relative;
     z-index: 1;
@@ -292,7 +292,7 @@ nav .login-btn:hover {
 .skill-card h3 { font-size: 1.3rem; margin-bottom: 0.8rem; }
 .skill-card p { color: #a0a0a0; line-height: 1.6; }
 
-/* ================= CONTACT SECTION STYLES ================= */
+/* Contact Section Styles */
 .contact-container {
     display: flex;
     gap: 3rem;
@@ -412,9 +412,16 @@ footer {
     margin-top: auto;
 }
 
-/* Responsive */
+/* Responsive Layout */
 @media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
     .contact-container {
         flex-direction: column;
+    }
+    .designer-name {
+        font-size: 2.8rem;
     }
 }
