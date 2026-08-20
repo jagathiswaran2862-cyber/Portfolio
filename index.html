@@ -3,78 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagatheeswaran | Portfolio</title>
-    <!-- External CSS Link -->
+    <title>Jagathiswaran | Professional Photographer & Designer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation Bar -->
     <header>
-        <div class="logo">Jagathees<span>waran</span></div>
+        <div class="logo">
+            <span class="logo-icon">📸</span> Jagathiswaran
+        </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <!-- ஒற்றை Red Blinking Contact Button மட்டுமே உள்ளது -->
-                <li><a href="#contact" class="btn-contact">Contact</a></li>
-            </ul>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-contact-btn">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- Background Sony Camera Silhouette with Mild SONY Text -->
-        <div class="hero-bg-camera"></div>
+    <!-- Background Camera Light Overlay -->
+    <div class="bg-camera-overlay"></div>
 
-        <div class="hero-content">
-            <div class="sony-tag">
-                <span>Shot & Crafted with</span> <strong>SONY</strong>
+    <!-- Main Hero Section -->
+    <main class="hero-container">
+        <!-- Profile Photo (Clean Rectangular Box with 3D Frame - No weird shapes) -->
+        <div class="photo-wrapper">
+            <div class="camera-lens-frame">
+                <img src="profile.jpg" alt="Jagathiswaran - Photographer" class="profile-pic">
             </div>
-            <div class="hero-subtitle">Professional Photographer & Visual Designer</div>
-            <h1 class="hero-title">Capturing Frames & Visual Experiences</h1>
-            <p class="hero-desc">Bringing stories to life through authentic candid moments, creative photography, and modern visual design.</p>
-            <a href="#about" class="btn-main">Explore My Work</a>
+            <div class="exp-badge-floating">
+                ⭐ 6+ Years Experience
+            </div>
         </div>
-    </section>
+        
+        <!-- Hero Content -->
+        <div class="content-wrapper">
+            <span class="tag-title">Pro Photographer & Graphic Designer</span>
+            <h1 class="designer-name">Jagathiswaran</h1>
+            <p class="bio">
+                Capturing emotions with <strong>6+ years of professional photography experience</strong>. 
+                Specialized in high-end Portrait photography, Candid shots, and high-impact visual design work.
+            </p>
+            <div class="hero-buttons">
+                <a href="#experience" class="cta-btn primary-btn">My Experience</a>
+                <a href="#contact" class="cta-btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </main>
 
-    <!-- About Me Section -->
+    <!-- About Section -->
     <section id="about" class="about-section">
-        <h2 class="section-title">About Me</h2>
-
-        <!-- Highlighted Introduction Title -->
-        <div class="intro-highlight">Introduction</div>
-
-        <!-- Larger Self Introduction Content -->
-        <div class="self-intro">
-            Hi, I am Jagatheeswaran.
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p class="subtitle">Capturing Real Moments & Designing Creative Ideas</p>
         </div>
 
-        <p class="about-desc">
-            I am a passionate visual creator and professional photographer with years of experience in capturing life's most precious moments. My focus is to tell authentic stories through every frame, blending light, mood, and emotion seamlessly. From framing raw human emotions in candid photography to crafting clean and impactful visual designs, I strive for perfection in every detail.
-        </p>
+        <div class="about-grid">
+            <div class="about-card intro-card">
+                <h3>Hi, I'm Jagathiswaran</h3>
+                <p>
+                    I am a <strong>Professional Photographer</strong> and <strong>Designer</strong> with over <strong>6 years of industry experience</strong>. 
+                    I transform everyday moments into timeless visual art with high accuracy, dramatic lighting, and creative digital retouching.
+                </p>
+            </div>
 
-        <!-- Smaller Skill Badges / Boxes -->
-        <div id="skills" class="skills-grid">
-            <div class="skill-card">📸 Photography</div>
-            <div class="skill-card">✨ Candid Photography</div>
-            <div class="skill-card">🎨 Visual Design</div>
-            <div class="skill-card">🎬 Photo Editing & Retouching</div>
-            <div class="skill-card">🖼️ Portrait & Event Coverage</div>
+            <div class="about-card">
+                <div class="card-icon">📸</div>
+                <h3>Portrait Photography</h3>
+                <p>Expert in creative and dramatic studio/outdoor portrait shoots focusing on real expressions and skin tones.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">✨</div>
+                <h3>Candid Photography</h3>
+                <p>Master at capturing spontaneous, unprompted moments naturally during weddings and events.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">🎨</div>
+                <h3>Visual Design</h3>
+                <p>Crafting modern graphic visual layouts, branding, posters, and digital artwork with high perfection.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+            <p class="subtitle">Industry Standard Tools I Use</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-badge ps-badge">Ps</div>
+                <h3>Adobe Photoshop</h3>
+                <p>High-end retouching, background editing, digital artwork, color manipulation, and image restoration.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-badge lr-badge">Lr</div>
+                <h3>Adobe Lightroom</h3>
+                <p>Professional RAW image editing, cinematic color grading, custom preset creation, and batch processing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Highlighted 6+ Years) -->
+    <section id="experience" class="experience-section">
+        <div class="section-title">
+            <h2>Professional Experience</h2>
+            <p class="subtitle">6+ Years of Proven Photography & Design Excellence</p>
+        </div>
+
+        <div class="experience-box">
+            <div class="exp-badge-main">
+                <span>6+ YEARS</span>
+                <p>PROFESSIONAL EXPERIENCE</p>
+            </div>
+
+            <div class="exp-details">
+                <h3>Lead Professional Photographer & Visual Designer</h3>
+                <p class="exp-intro">
+                    With over 6 years of hands-on field experience, I specialize in delivering cinematic photography and custom design solutions for clients and events.
+                </p>
+
+                <div class="exp-grid">
+                    <div class="exp-item">
+                        <h4>📷 Portrait Photography</h4>
+                        <p>Specialized in high-definition portraiture with advanced lighting control, depth, and creative framing.</p>
+                    </div>
+
+                    <div class="exp-item">
+                        <h4>🌟 Candid & Event Shoots</h4>
+                        <p>6+ years of expertise capturing natural moments in cultural functions, weddings, and premium shoots.</p>
+                    </div>
+
+                    <div class="exp-item">
+                        <h4>🎨 Digital Post-Processing</h4>
+                        <p>Advanced photo color grading, skin retouching, light balancing, and background enhancements using Photoshop & Lightroom.</p>
+                    </div>
+
+                    <div class="exp-item">
+                        <h4>💻 Graphic & Creative Design</h4>
+                        <p>Combining visual photography skills with graphics to craft eye-catching designs, album covers, and poster art.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Direct Mail Service -->
     <section id="contact" class="contact-section">
-        <h2>Let's Work Together</h2>
-        <p>Interested in working together or hiring for shoot & design projects?</p>
-        <a href="mailto:jagatheeswaran@example.com" class="btn-main">Get In Touch</a>
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p class="subtitle">Let's Connect for Shoots & Projects</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Left Info Box -->
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>Available for Photography Shoots, Portrait sessions, and Graphic Design projects!</p>
+
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:jagathiswaran2862@gmail.com">jagathiswaran2862@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <div>
+                        <h4>Phone Number</h4>
+                        <a href="tel:+917806827589">+91 78068 27589</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Tamil Nadu, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Message Form Box (Direct Mail API Integration) -->
+            <div class="contact-form-box">
+                <h3>Send a Message</h3>
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <!-- Web3Forms Access Key for direct email delivery -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Portfolio Inquiry for Jagathiswaran">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your project details or message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="send-btn" id="submit-btn">Send Message 🚀</button>
+                    <p id="form-response" class="form-response-msg"></p>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Jagatheeswaran. All rights reserved.</p>
+        <p>&copy; 2026 Jagathiswaran. All Rights Reserved.</p>
     </footer>
 
+    <!-- Form Submit Handler Script -->
+    <script>
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', function(e) {
+            submitBtn.innerHTML = 'Sending... ⏳';
+            submitBtn.disabled = true;
+        });
+    </script>
 </body>
 </html>
