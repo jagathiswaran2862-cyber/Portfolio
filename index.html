@@ -3,406 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagatheeswaran | Photography & Visual Design Portfolio</title>
-    <style>
-        /* Base Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #0f0f11;
-            color: #f1f1f1;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* Header Navigation */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 8%;
-            background: rgba(15, 15, 17, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #fff;
-            text-transform: uppercase;
-        }
-
-        .logo span {
-            color: #ff3344;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            align-items: center;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #ccc;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #fff;
-        }
-
-        /* SINGLE Red Blinking Contact Button */
-        .btn-contact {
-            background-color: #ff2233;
-            color: #fff !important;
-            padding: 8px 22px;
-            border-radius: 20px;
-            font-weight: 600;
-            animation: blinkRed 1.8s infinite;
-            box-shadow: 0 0 10px rgba(255, 34, 51, 0.5);
-        }
-
-        @keyframes blinkRed {
-            0%, 100% {
-                background-color: #ff2233;
-                box-shadow: 0 0 12px rgba(255, 34, 51, 0.8);
-            }
-            50% {
-                background-color: #880011;
-                box-shadow: 0 0 3px rgba(136, 0, 17, 0.3);
-            }
-        }
-
-        /* Hero Section with Sony Camera Branding Background */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 120px 8% 60px;
-            background: radial-gradient(circle at center, #181822 0%, #0f0f11 85%);
-            overflow: hidden;
-        }
-
-        /* Sony Camera Background Graphic Overlay */
-        .hero-bg-camera {
-            position: absolute;
-            right: 4%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 580px;
-            height: 420px;
-            opacity: 0.16;
-            pointer-events: none;
-            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' fill='none' stroke='%23ffffff' stroke-width='4'><path d='M250,150 L320,150 L350,100 L450,100 L480,150 L550,150 C580,150 600,170 600,200 L600,380 C600,410 580,430 550,430 L250,430 C220,430 200,410 200,380 L200,200 C200,170 220,150 250,150 Z'/><circle cx='400' cy='290' r='110'/><circle cx='400' cy='290' r='80'/><circle cx='400' cy='290' r='50'/><rect x='230' y='180' width='50' height='30' rx='5'/><text x='365' y='135' font-family='sans-serif' font-weight='bold' font-size='22' fill='%23ffffff' stroke='none' letter-spacing='4'>SONY</text></svg>") no-repeat center center;
-            background-size: contain;
-            filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
-        }
-
-        .hero-content {
-            max-width: 650px;
-            z-index: 2;
-        }
-
-        .sony-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 13px;
-            color: #ddd;
-            margin-bottom: 20px;
-        }
-
-        .sony-tag strong {
-            letter-spacing: 3px;
-            color: #fff;
-            font-weight: 800;
-        }
-
-        .hero-subtitle {
-            color: #ff3344;
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .hero-title {
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero-desc {
-            font-size: 16px;
-            color: #aaa;
-            margin-bottom: 30px;
-        }
-
-        .btn-main {
-            display: inline-block;
-            background: #ff3344;
-            color: #fff;
-            padding: 12px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn-main:hover {
-            background: #e02233;
-            box-shadow: 0 5px 15px rgba(255, 51, 68, 0.4);
-        }
-
-        /* Common Section Layout */
-        section {
-            padding: 90px 8%;
-        }
-
-        .section-title {
-            font-size: 28px;
-            color: #ff3344;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        /* About Me Section */
-        .about-section {
-            background: #141418;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Large Self Introduction */
-        .self-intro {
-            font-size: 38px;
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 1.3;
-            margin-bottom: 20px;
-            border-left: 4px solid #ff3344;
-            padding-left: 20px;
-        }
-
-        .about-desc {
-            font-size: 16px;
-            color: #bbb;
-            max-width: 850px;
-            margin-bottom: 35px;
-        }
-
-        /* Small Skill Cards / Badges */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .skill-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #ddd;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            border-color: #ff3344;
-            background: rgba(255, 51, 68, 0.1);
-            color: #fff;
-            transform: translateY(-2px);
-        }
-
-        /* Portfolio / Works Gallery */
-        .portfolio-section {
-            background: #0f0f11;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .portfolio-item {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #181820;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            height: 250px;
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-            transition: 0.3s;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 51, 68, 0.4);
-        }
-
-        .portfolio-info h3 {
-            font-size: 20px;
-            color: #fff;
-            margin-bottom: 5px;
-        }
-
-        .portfolio-info p {
-            font-size: 14px;
-            color: #aaa;
-        }
-
-        /* Services Section */
-        .services-section {
-            background: #141418;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .service-card {
-            background: #181820;
-            padding: 30px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: #ff3344;
-        }
-
-        .service-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .service-card p {
-            font-size: 14px;
-            color: #999;
-        }
-
-        /* Contact Section Form */
-        .contact-section {
-            background: #0f0f11;
-            text-align: center;
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 30px auto 0;
-            text-align: left;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #ccc;
-            font-size: 14px;
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            background: #181820;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            color: #fff;
-            outline: none;
-        }
-
-        .form-group input:focus, 
-        .form-group textarea:focus {
-            border-color: #ff3344;
-        }
-
-        .btn-submit {
-            width: 100%;
-            border: none;
-            cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #666;
-            font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            background: #0f0f11;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                padding: 15px 5%;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            .hero-title {
-                font-size: 36px;
-            }
-
-            .self-intro {
-                font-size: 28px;
-            }
-
-            .hero-bg-camera {
-                opacity: 0.08;
-                width: 100%;
-                right: 0;
-            }
-        }
-    </style>
+    <title>Jagatheeswaran | Portfolio</title>
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -413,9 +16,8 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Works</a></li>
-                <li><a href="#services">Services</a></li>
-                <!-- Only ONE Contact link with Red Blinking Effect -->
+                <li><a href="#skills">Skills</a></li>
+                <!-- ஒற்றை Red Blinking Contact Button மட்டுமே உள்ளது -->
                 <li><a href="#contact" class="btn-contact">Contact</a></li>
             </ul>
         </nav>
@@ -423,7 +25,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Background Sony Camera Silhouette with SONY brand -->
+        <!-- Background Sony Camera Silhouette with Mild SONY Text -->
         <div class="hero-bg-camera"></div>
 
         <div class="hero-content">
@@ -433,103 +35,41 @@
             <div class="hero-subtitle">Professional Photographer & Visual Designer</div>
             <h1 class="hero-title">Capturing Frames & Visual Experiences</h1>
             <p class="hero-desc">Bringing stories to life through authentic candid moments, creative photography, and modern visual design.</p>
-            <a href="#portfolio" class="btn-main">View My Portfolio</a>
+            <a href="#about" class="btn-main">Explore My Work</a>
         </div>
     </section>
 
     <!-- About Me Section -->
     <section id="about" class="about-section">
-        <h2 class="section-title">Introduction</h2>
+        <h2 class="section-title">About Me</h2>
 
-        <!-- Prominent Self Introduction -->
+        <!-- Highlighted Introduction Title -->
+        <div class="intro-highlight">Introduction</div>
+
+        <!-- Larger Self Introduction Content -->
         <div class="self-intro">
             Hi, I am Jagatheeswaran.
         </div>
 
         <p class="about-desc">
-            A passionate visual creator dedicated to capturing genuine emotional moments and creating impactful designs. With a keen eye for light, details, and storytelling, I specialize in preserving memories and elevating brand aesthetics.
+            I am a passionate visual creator and professional photographer with years of experience in capturing life's most precious moments. My focus is to tell authentic stories through every frame, blending light, mood, and emotion seamlessly. From framing raw human emotions in candid photography to crafting clean and impactful visual designs, I strive for perfection in every detail.
         </p>
 
-        <!-- Smaller Skill Badges -->
-        <div class="skills-grid">
+        <!-- Smaller Skill Badges / Boxes -->
+        <div id="skills" class="skills-grid">
             <div class="skill-card">📸 Photography</div>
             <div class="skill-card">✨ Candid Photography</div>
             <div class="skill-card">🎨 Visual Design</div>
             <div class="skill-card">🎬 Photo Editing & Retouching</div>
             <div class="skill-card">🖼️ Portrait & Event Coverage</div>
-            <div class="skill-card">🖌️ Brand Identity</div>
-        </div>
-    </section>
-
-    <!-- Portfolio / Works Section -->
-    <section id="portfolio" class="portfolio-section">
-        <h2 class="section-title">Selected Works</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="portfolio-info">
-                    <h3>Wedding Storytelling</h3>
-                    <p>Candid Photography</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-info">
-                    <h3>Commercial Branding</h3>
-                    <p>Visual Design & Graphics</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-info">
-                    <h3>Portrait Series</h3>
-                    <p>Studio & Outdoor Photography</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <h2 class="section-title">My Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">📷</div>
-                <h3>Photography</h3>
-                <p>High-end event, portrait, and lifestyle photography services.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Candid Shoots</h3>
-                <p>Capturing unscripted, natural moments with deep emotion.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎨</div>
-                <h3>Visual Design</h3>
-                <p>Modern graphics, poster designs, and branding identity assets.</p>
-            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2 class="section-title">Get In Touch</h2>
-        <p style="color: #888;">Have a project or shoot in mind? Send a message below!</p>
-        
-        <div class="contact-container">
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label>Your Email</label>
-                    <input type="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea rows="4" placeholder="Tell me about your project or event..." required></textarea>
-                </div>
-                <button type="submit" class="btn-main btn-submit">Send Message</button>
-            </form>
-        </div>
+        <h2>Let's Work Together</h2>
+        <p>Interested in working together or hiring for shoot & design projects?</p>
+        <a href="mailto:jagatheeswaran@example.com" class="btn-main">Get In Touch</a>
     </section>
 
     <footer>
