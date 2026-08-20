@@ -18,17 +18,17 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+            <!-- ஒற்றை Red Blinking Contact Button மட்டுமே உள்ளது -->
             <a href="#contact" class="nav-contact-btn">Contact</a>
         </nav>
     </header>
 
-    <!-- Background Camera Light Overlay -->
+    <!-- Background Sony Camera Overlay -->
     <div class="bg-camera-overlay"></div>
 
     <!-- Main Hero Section -->
     <main class="hero-container">
-        <!-- Profile Photo (Clean Rectangular Box with 3D Frame - No weird shapes) -->
+        <!-- Profile Photo Frame -->
         <div class="photo-wrapper">
             <div class="camera-lens-frame">
                 <img src="profile.jpg" alt="Jagathiswaran - Photographer" class="profile-pic">
@@ -48,7 +48,6 @@
             </p>
             <div class="hero-buttons">
                 <a href="#experience" class="cta-btn primary-btn">My Experience</a>
-                <a href="#contact" class="cta-btn secondary-btn">Contact Me</a>
             </div>
         </div>
     </main>
@@ -57,40 +56,29 @@
     <section id="about" class="about-section">
         <div class="section-title">
             <h2>About Me</h2>
-            <p class="subtitle">Capturing Real Moments & Designing Creative Ideas</p>
+            <div class="intro-highlight">Introduction</div>
         </div>
 
-        <div class="about-grid">
-            <div class="about-card intro-card">
-                <h3>Hi, I'm Jagathiswaran</h3>
-                <p>
-                    I am a <strong>Professional Photographer</strong> and <strong>Designer</strong> with over <strong>6 years of industry experience</strong>. 
-                    I transform everyday moments into timeless visual art with high accuracy, dramatic lighting, and creative digital retouching.
-                </p>
-            </div>
+        <!-- Prominent Self Intro Content -->
+        <div class="self-intro">
+            Hi, I'm Jagathiswaran
+        </div>
+        <p class="about-desc-long">
+            I am a <strong>Professional Photographer</strong> and <strong>Visual Designer</strong> with over <strong>6 years of industry experience</strong>. I transform everyday moments into timeless visual art with high accuracy, dramatic lighting, and creative digital retouching. From capturing unscripted emotions to crafting modern brand aesthetics, I deliver perfection in every frame.
+        </p>
 
-            <div class="about-card">
-                <div class="card-icon">📸</div>
-                <h3>Portrait Photography</h3>
-                <p>Expert in creative and dramatic studio/outdoor portrait shoots focusing on real expressions and skin tones.</p>
-            </div>
-
-            <div class="about-card">
-                <div class="card-icon">✨</div>
-                <h3>Candid Photography</h3>
-                <p>Master at capturing spontaneous, unprompted moments naturally during weddings and events.</p>
-            </div>
-
-            <div class="about-card">
-                <div class="card-icon">🎨</div>
-                <h3>Visual Design</h3>
-                <p>Crafting modern graphic visual layouts, branding, posters, and digital artwork with high perfection.</p>
-            </div>
+        <!-- Skill Badges -->
+        <div id="skills" class="skills-grid-small">
+            <div class="skill-badge-item">📸 Photography</div>
+            <div class="skill-badge-item">✨ Candid Photography</div>
+            <div class="skill-badge-item">🎨 Visual Design</div>
+            <div class="skill-badge-item">🎬 Photo Editing & Retouching</div>
+            <div class="skill-badge-item">🖼️ Portrait & Event Coverage</div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <!-- Technical Skills Section -->
+    <section class="skills-section">
         <div class="section-title">
             <h2>Technical Skills</h2>
             <p class="subtitle">Industry Standard Tools I Use</p>
@@ -111,7 +99,7 @@
         </div>
     </section>
 
-    <!-- Experience Section (Highlighted 6+ Years) -->
+    <!-- Experience Section -->
     <section id="experience" class="experience-section">
         <div class="section-title">
             <h2>Professional Experience</h2>
@@ -155,7 +143,7 @@
         </div>
     </section>
 
-    <!-- Contact Section with Direct Mail Service -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="section-title">
             <h2>Contact</h2>
@@ -163,7 +151,6 @@
         </div>
 
         <div class="contact-container">
-            <!-- Left Info Box -->
             <div class="contact-info">
                 <h3>Get In Touch</h3>
                 <p>Available for Photography Shoots, Portrait sessions, and Graphic Design projects!</p>
@@ -193,11 +180,9 @@
                 </div>
             </div>
 
-            <!-- Right Message Form Box (Direct Mail API Integration) -->
             <div class="contact-form-box">
                 <h3>Send a Message</h3>
                 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                    <!-- Web3Forms Access Key for direct email delivery -->
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                     <input type="hidden" name="subject" value="New Portfolio Inquiry for Jagathiswaran">
 
@@ -227,7 +212,6 @@
         <p>&copy; 2026 Jagathiswaran. All Rights Reserved.</p>
     </footer>
 
-    <!-- Form Submit Handler Script -->
     <script>
         const form = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
